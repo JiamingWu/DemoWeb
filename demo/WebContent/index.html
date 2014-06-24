@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>訂單管理系統</title>
 
     <!-- Bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -34,15 +34,40 @@
 
       <form class="form-signin" role="form">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="email" class="form-control" placeholder="Email address" required autofocus>
+        <div class="btn-group">
+		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		      選擇身份
+		      <span class="caret"></span>
+		    </button>
+		    <ul class="dropdown-menu">
+		      <li><a href="admin.html">管理員</a></li>
+		      <li><a href="op1.html">揀貨員</a></li>
+		      <li><a href="op2.html">收貨員</a></li>
+		      <li><a href="custom.html">客戶</a></li>
+		      <li><a href="manager.html">散客管理員</a></li>
+		    </ul>
+		  </div>
+        <input type="input" class="form-control" placeholder="Username" required>
         <input type="password" class="form-control" placeholder="Password" required>
-        <label class="checkbox">
+        <!-- <label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me
-        </label>
+        </label> -->
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
-
-    </div> <!-- /container -->
+		<div class="row">
+			<div class="col-md-4 col-xs-3"> </div>
+			<div class="col-md-4 col-xs-6">
+				<div class="input-group">
+					<span class="input-group-addon">快遞查詢</span> <input type="text"
+						class="form-control" placeholder="快遞單號"> <span
+						class="input-group-btn">
+						<button class="btn btn-default" type="button">Go!</button>
+					</span>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-3"> </div>
+		</div>
+	</div> <!-- /container -->
     
   </body>
 </html>
