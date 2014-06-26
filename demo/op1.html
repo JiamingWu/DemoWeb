@@ -23,11 +23,21 @@
     
     <script>
       $(document).ready(function() {
-    	  
+        $(".panel").hide();
+	  	$(".panel.func1").show();
+	  	$(document).on('click', '.funcLink', 
+	  		function(elem){
+	  			$(".panel").hide();
+	  			$(".adminNav > li").removeClass("active");
+	  			var tar = ".panel." + $(this).attr('t');
+	  			$(tar).show();
+	  			$(".adminNav > li[t='" + $(this).attr('t') + "']").addClass("active");
+	  		});
       });
     </script>
   </head>
   <body>
+
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,11 +53,12 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">待辦訂單建立</a></li>
-        <li><a href="#">已處理訂單查詢</a></li>
-        <li><a href="#">揀貨報表</a></li>
+      <ul class="nav navbar-nav adminNav">
+        <li class="active funcLink" t="func1"><a href="#">待辦訂單建立</a></li>
+        <li class="funcLink" t="func2"><a href="#">已處理訂單查詢</a></li>
+        <li class="funcLink" t="func3"><a href="#">揀貨報表</a></li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li><p class="navbar-text">帳號xxx</p></li>
         <li><a href="index.html">登出</a></li>
@@ -55,5 +66,114 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<div class="panel panel-info func1">
+  <!-- Default panel contents -->
+  <div class="panel-heading">待辦訂單列表</div>
+  <!-- Table -->
+  <table class="table">
+    <tr><td>訂單號碼</td><td>快遞單號</td><td>天貓訂單編號</td><td>收件人</td><td>產品總數</td><td></td></tr>
+    <tr><td>001</td><td>0001</td><td>X-0001</td><td>王小明</td><td>10</td><td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">訂單處理</button></td></tr>
+  </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">訂單處理 - 0001</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" role="form">
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-sm-4 control-label">帳號</label>
+		    <div class="col-sm-8">
+		    	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="輸入帳號">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1" class="col-sm-4 control-label">密碼</label>
+		    <div class="col-sm-8">
+		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="輸入密碼">
+		    <span class="help-block">(若不修改可略過)</span>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1" class="col-sm-4 control-label">再次輸入密碼</label>
+		    <div class="col-sm-8">
+		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="再次輸入密碼">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-sm-4 control-label">身分證字號/統一編號</label>
+		    <div class="col-sm-8">
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="輸入身分證字號/統一編號">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-sm-4 control-label">聯絡電話</label>
+		    <div class="col-sm-8">
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="02-123456789">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-sm-4 control-label">傳真</label>
+		    <div class="col-sm-8">
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="02-123456789">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-sm-4 control-label">手機</label>
+		    <div class="col-sm-8">
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="09123456789">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-sm-4 control-label">地址</label>
+		    <div class="col-sm-8">
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="輸入地址">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-sm-4 control-label">聯絡窗口</label>
+		    <div class="col-sm-8">
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="輸入聯絡窗口">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-sm-4 control-label">物流費用/公斤</label>
+		    <div class="col-sm-8">
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="輸入物流費用/公斤">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-sm-4 control-label">備註</label>
+		    <div class="col-sm-8">
+		    <textarea class="form-control" rows="3"></textarea>
+		    </div>
+		  </div>
+		  <div class="checkbox">
+		    <label class="col-sm-offset-4 col-sm-8">
+		      <input type="checkbox"> 啟用
+		    </label>
+		  </div>
+		  <div class="form-group">
+		  	<label for="exampleInputEmail1" class="col-sm-4 control-label">建檔日期</label>
+		    <div class="col-sm-8">
+		    <p class="lead">2014/06/20</p>
+		    </div>
+		  </div>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   </body>
 </html>
