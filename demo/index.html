@@ -63,13 +63,34 @@
 					<span class="input-group-addon">快遞查詢</span> <input type="text"
 						class="form-control" placeholder="快遞單號"> <span
 						class="input-group-btn">
-						<button class="btn btn-default" type="button">Go!</button>
+						<button class="btn btn-default" type="button" data-toggle="modal" data-target="#myModal">Go!</button>
 					</span>
 				</div>
 			</div>
 			<div class="col-md-4 col-xs-3"> </div>
 		</div>
 	</div> <!-- /container -->
+    
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">快遞單號 - 12345678</h4>
+      </div>
+      <div class="modal-body">
+        1. 查無此筆資料!<br/>
+        2. 此筆已寄出!<br/>
+        3. 此筆已完成!<br/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
+      </div>
+    </div>
+  </div>
+</div>
     
   </body>
 </html>
