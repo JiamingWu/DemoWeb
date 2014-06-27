@@ -83,26 +83,24 @@
   <!-- Table -->
   <div class="row">
       <div class="col-xs-3"><p class="h4">訂單日期</p></div>
-      <div class="col-xs-3"><p class="h4 text-primary"><input type="text" value="2014/06/30"/> ~ <input type="text" value="2014/06/30"/></p></div>
-      <div class="col-xs-3"><p class="h4">天貓訂單編號</p></div>
-      <div class="col-xs-3"><p class="h4 text-primary"><input type="text" value=""/></p></div>
+      <div class="col-xs-9"><p class="h4 text-primary"><input type="text" value="2014/06/30"/> ~ <input type="text" value="2014/06/30"/></p></div>
   </div>
   <div class="row">
-      <div class="col-xs-12"><button name="中共"/>查詢</div>
+      <div class="col-xs-3"><p class="h4">天貓訂單編號</p></div>
+      <div class="col-xs-9"><p class="h4 text-primary"><input type="text" value=""/></p></div>
   </div>
-  <table class="table">
-    <tr><td>訂單號碼</td><td>快遞單號</td><td>天貓訂單編號</td><td>收件人</td><td>產品總數</td><td></td></tr>
-    <tr><td>001</td><td>0001</td><td>X-0001</td><td>王小明</td><td>10</td><td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">訂單處理</button></td></tr>
-  </table>
+  <div class="panel-footer">
+      <button class="btn btn-primary" onclick="$('.subfunc2').show()">查詢</button>
+  </div>
 </div>
 
-<div class="panel panel-info subfunc2">
+<div class="panel panel-info mainpanel subfunc2">
   <!-- Default panel contents -->
-  <div class="panel-heading">已處理訂單查詢</div>
+  <div class="panel-heading">查詢結果</div>
   <!-- Table -->
   <table class="table">
     <tr><td>訂單號碼</td><td>快遞單號</td><td>天貓訂單編號</td><td>收件人</td><td>產品總數</td><td></td></tr>
-    <tr><td>001</td><td>0001</td><td>X-0001</td><td>王小明</td><td>10</td><td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">訂單處理</button></td></tr>
+    <tr><td>001</td><td>0001</td><td>X-0001</td><td>王小明</td><td>10</td><td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">訂單詳細資料</button></td></tr>
   </table>
 </div>
 
