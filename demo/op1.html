@@ -23,11 +23,11 @@
     
     <script>
       $(document).ready(function() {
-        $(".panel").hide();
+        $(".mainpanel").hide();
 	  	$(".panel.func1").show();
 	  	$(document).on('click', '.funcLink', 
 	  		function(elem){
-	  			$(".panel").hide();
+	  			$(".mainpanel").hide();
 	  			$(".adminNav > li").removeClass("active");
 	  			var tar = ".panel." + $(this).attr('t');
 	  			$(tar).show();
@@ -67,7 +67,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="panel panel-info func1">
+<div class="panel panel-info mainpanel func1">
   <!-- Default panel contents -->
   <div class="panel-heading">待辦訂單列表</div>
   <!-- Table -->
@@ -86,90 +86,70 @@
         <h4 class="modal-title" id="myModalLabel">訂單處理 - 0001</h4>
       </div>
       <div class="modal-body">
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">訂單號碼</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+            <div class="col-xs-3"><p class="h4">訂單日期</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">2014/05/30</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">天貓客戶名稱</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+            <div class="col-xs-3"><p class="h4">天貓訂單編號</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">天貓客戶電話</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+            <div class="col-xs-3"><p class="h4">天貓客戶傳真</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">天貓客戶手機</p></div>
+            <div class="col-xs-9"><p class="h4 text-primary">00001</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">天貓客戶地址</p></div>
+            <div class="col-xs-9"><p class="h4 text-primary">00001</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">收件人</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+            <div class="col-xs-3"><p class="h4">收件人電話</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">收件地址</p></div>
+            <div class="col-xs-9"><p class="h4 text-primary">00001</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">總重量</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">100</p></div>
+            <div class="col-xs-3"><p class="h4">產品總數</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">3</p></div>
+        </div>
+        <br/>
+		<div class="panel panel-info">
+  <!-- Default panel contents -->
+  <div class="panel-heading">訂單明細</div>
+  <!-- Table -->
+  <table class="table">
+    <tr><td>條碼</td><td>產品代號</td><td>產品名稱</td><td>產品規格 長寬高</td><td>重量</td><td>數量</td><td>條碼</td></tr>
+    <tr><td>001</td><td>0001</td><td>X-0001</td><td>100*20*20</td><td>10</td><td>10</td><td><input type="email" class="col-md-12" id="exampleInputEmail1"></td></tr>
+  </table>
+</div>
         <form class="form-horizontal" role="form">
-		  <div class="form-group">
-		    <label for="exampleInputEmail1" class="col-sm-4 control-label">帳號</label>
-		    <div class="col-sm-8">
-		    	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="輸入帳號">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputPassword1" class="col-sm-4 control-label">密碼</label>
-		    <div class="col-sm-8">
-		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="輸入密碼">
-		    <span class="help-block">(若不修改可略過)</span>
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputPassword1" class="col-sm-4 control-label">再次輸入密碼</label>
-		    <div class="col-sm-8">
-		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="再次輸入密碼">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputEmail1" class="col-sm-4 control-label">身分證字號/統一編號</label>
-		    <div class="col-sm-8">
-		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="輸入身分證字號/統一編號">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputEmail1" class="col-sm-4 control-label">聯絡電話</label>
-		    <div class="col-sm-8">
-		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="02-123456789">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputEmail1" class="col-sm-4 control-label">傳真</label>
-		    <div class="col-sm-8">
-		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="02-123456789">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputEmail1" class="col-sm-4 control-label">手機</label>
-		    <div class="col-sm-8">
-		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="09123456789">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputEmail1" class="col-sm-4 control-label">地址</label>
-		    <div class="col-sm-8">
-		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="輸入地址">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputEmail1" class="col-sm-4 control-label">聯絡窗口</label>
-		    <div class="col-sm-8">
-		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="輸入聯絡窗口">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputEmail1" class="col-sm-4 control-label">物流費用/公斤</label>
-		    <div class="col-sm-8">
-		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="輸入物流費用/公斤">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputEmail1" class="col-sm-4 control-label">備註</label>
-		    <div class="col-sm-8">
-		    <textarea class="form-control" rows="3"></textarea>
-		    </div>
-		  </div>
-		  <div class="checkbox">
-		    <label class="col-sm-offset-4 col-sm-8">
-		      <input type="checkbox"> 啟用
-		    </label>
-		  </div>
-		  <div class="form-group">
-		  	<label for="exampleInputEmail1" class="col-sm-4 control-label">建檔日期</label>
-		    <div class="col-sm-8">
-		    <p class="lead">2014/06/20</p>
-		    </div>
-		  </div>
-		</form>
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="col-sm-4 control-label">快遞單號</label>
+            <div class="col-sm-8">
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="輸入快遞單號">
+            </div>
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">完成</button>
       </div>
     </div>
   </div>
