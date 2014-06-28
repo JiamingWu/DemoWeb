@@ -75,9 +75,26 @@
             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="輸入快遞單號">
         </div>
       </div>
-      <button type="button" class="btn btn-primary" data-dismiss="modal">儲存</button>
+      <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal">儲存</button>
   </form>
 </div>
 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">快遞單號 - 12345678</h4>
+      </div>
+      <div class="modal-body">
+        1. 查無此筆資料!<br/>
+        2. 此筆更新完成!<br/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+      </div>
+    </div>
+  </div>
+</div>
   </body>
 </html>
