@@ -55,7 +55,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav adminNav">
         <li class="active funcLink" t="func1"><a href="#">天貓訂單查詢</a></li>
-        <li class="active funcLink" t="func1"><a href="#">產品數量查詢</a></li>
+        <li class="funcLink" t="func2"><a href="#">產品數量查詢</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><p class="navbar-text">帳號xxx</p></li>
@@ -65,6 +65,141 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<div class="panel panel-info mainpanel func1">
+  <!-- Default panel contents -->
+  <div class="panel-heading">訂單查詢</div>
+  <!-- Table -->
+  <div class="row">
+      <div class="col-xs-3"><p class="h4">訂單日期</p></div>
+      <div class="col-xs-9"><p class="h4 text-primary"><input type="text" value="2014/06/30"/> ~ <input type="text" value="2014/06/30"/></p></div>
+  </div>
+  <div class="row">
+      <div class="col-xs-3"><p class="h4">天貓訂單編號</p></div>
+      <div class="col-xs-9"><p class="h4 text-primary"><input type="text" value=""/></p></div>
+  </div>
+  <div class="panel-footer">
+      <button class="btn btn-primary" onclick="$('.subfunc1').show()">查詢</button>
+  </div>
+</div>
+
+<div class="panel panel-info mainpanel subfunc1">
+  <!-- Default panel contents -->
+  <div class="panel-heading">查詢結果</div>
+  <!-- Table -->
+  <table class="table">
+    <tr><td>訂單號碼</td><td>快遞單號</td><td>天貓訂單編號</td><td>收件人</td><td>產品總數</td><td>狀態</td><td></td></tr>
+    <tr><td>001</td><td>0001</td><td>X-0001</td><td>王小明</td><td>10</td><td>待揀貨<br>待收貨<br>快遞中<br>已完成</td><td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">訂單詳細資料</button></td></tr>
+  </table>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">訂單處理 - 0001</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">訂單號碼</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+            <div class="col-xs-3"><p class="h4">訂單日期</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">2014/05/30</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">天貓客戶名稱</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+            <div class="col-xs-3"><p class="h4">天貓訂單編號</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">天貓客戶電話</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+            <div class="col-xs-3"><p class="h4">天貓客戶傳真</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">天貓客戶手機</p></div>
+            <div class="col-xs-9"><p class="h4 text-primary">00001</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">天貓客戶地址</p></div>
+            <div class="col-xs-9"><p class="h4 text-primary">00001</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">收件人</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+            <div class="col-xs-3"><p class="h4">收件人電話</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">00001</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">收件地址</p></div>
+            <div class="col-xs-9"><p class="h4 text-primary">00001</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">總重量</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">100</p></div>
+            <div class="col-xs-3"><p class="h4">產品總數</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">3</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"><p class="h4">快遞單號</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">X01231000001</p></div>
+            <div class="col-xs-3"><p class="h4">狀態</p></div>
+            <div class="col-xs-3"><p class="h4 text-primary">快遞中</p></div>
+        </div>
+        <br/>
+        <div class="panel panel-info">
+  <!-- Default panel contents -->
+  <div class="panel-heading">訂單明細</div>
+  <!-- Table -->
+  <table class="table">
+    <tr><td>條碼</td><td>產品代號</td><td>產品名稱</td><td>產品規格 長寬高</td><td>重量</td><td>數量</td><td>條碼</td></tr>
+    <tr><td>001</td><td>0001</td><td>X-0001</td><td>100*20*20</td><td>10</td><td>10</td><td><input type="email" class="col-md-12" id="exampleInputEmail1"></td></tr>
+  </table>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-info mainpanel func2">
+  <!-- Default panel contents -->
+  <div class="panel-heading">產品查詢</div>
+  <!-- Table -->
+  <div class="row">
+      <div class="col-xs-3"><p class="h4">產品代號</p></div>
+      <div class="col-xs-9"><p class="h4 text-primary"><input type="text" value="2014/06/30"/></p></div>
+  </div>
+  <div class="row">
+      <div class="col-xs-3"><p class="h4">產品條碼</p></div>
+      <div class="col-xs-9"><p class="h4 text-primary"><input type="text" value=""/></p></div>
+  </div>
+  <div class="row">
+      <div class="col-xs-3"><p class="h4">產品名稱</p></div>
+      <div class="col-xs-9"><p class="h4 text-primary"><input type="text" value=""/></p></div>
+  </div>
+  <div class="panel-footer">
+      <button class="btn btn-primary" onclick="$('.subfunc2').show()">查詢</button>
+  </div>
+</div>
+
+<div class="panel panel-info mainpanel subfunc2">
+  <!-- Default panel contents -->
+  <div class="panel-heading">查詢結果</div>
+  <!-- Table -->
+  <table class="table">
+    <tr><td>產品圖片</td><td>產品條碼</td><td>產品代號</td><td>產品名稱</td><td>重量</td><td>庫存數量</td></tr>
+    <tr><td><img src="images/abc.jpg"  class="img-responsive"/></td><td>001</td><td>產品代號1</td><td>產品1</td><td>10</td><td>10</td></tr>
+    <tr><td><img src="images/abc.jpg" class="img-responsive"/></td><td>002</td><td>產品代號2</td><td>產品2</td><td>20</td><td>10</td></tr>
+  </table>
+  <div class="panel-footer"><p class="text-center"></p></div>
+</div>
 
 
   </body>
