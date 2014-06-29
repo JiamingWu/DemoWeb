@@ -438,5 +438,38 @@
   </div>
 </div>
 
+
+<div class="panel panel-info mainpanel func8">
+  <!-- Default panel contents -->
+  <div class="panel-heading">揀貨員報表</div>
+  <!-- Table -->
+  <div class="row">
+      <div class="col-xs-3"><p class="h4">揀貨日期</p></div>
+      <div class="col-xs-9"><p class="h4 text-primary"><input type="text" value="2014/06/30"/> ~ <input type="text" value="2014/06/30"/></p></div>
+  </div>
+  <div class="row">
+      <div class="col-xs-3"><p class="h4">揀貨員</p></div>
+      <div class="col-xs-9"><p class="h4 text-primary"><select class="form-control">
+                  <option>揀貨員1</option>
+                  <option>揀貨員2</option>
+                </select></p></div>
+  </div>
+  <div class="panel-footer">
+      <button class="btn btn-primary" onclick="$('.subfunc8').show()">查詢</button>
+  </div>
+</div>
+
+<div class="panel panel-info mainpanel subfunc8">
+  <!-- Default panel contents -->
+  <div class="panel-heading">查詢結果</div>
+  <div class="panel-body">總抽佣費用: $100 </div>
+  <!-- Table -->
+  <table class="table">
+    <tr><td>訂單號碼</td><td>快遞單號</td><td>天貓訂單編號</td><td>總重量</td><td>費用</td></tr>
+    <tr><td>001</td><td>0001</td><td>X-0001</td><td>10</td><td>50</td></tr>
+    <tr><td>002</td><td>0002</td><td>X-0002</td><td>10</td><td>50</td></tr>
+  </table>
+</div>
+
   </body>
 </html>
